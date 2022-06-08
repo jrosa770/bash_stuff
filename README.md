@@ -1,2 +1,2 @@
 # bash_stuff
-practical bash
+Basic but practical bash
