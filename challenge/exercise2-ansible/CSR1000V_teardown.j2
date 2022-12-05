@@ -1,0 +1,10 @@
+!
+{% for interface in interfaces %}
+default interface {{ interface.name }}
+!
+{% endfor %}
+!
+{% for bgp_main in bgp %}
+no router bgp {{ bgp_main.asn }}
+{% endfor %}
+!

@@ -1,0 +1,54 @@
+---
+- hosts: cisco
+  gather_facts: no
+  become: yes
+  become_method: enable
+
+  tasks:
+
+    - name: Creds
+      include_vars: "secrets.yml"
+
+    - name: Host Specific Vars
+      include_vars: "{{ inventory_hostname }}_vars.yml"
+
+    - name: username and Password
+      set_fact:
+        ansible_user: "{{ creds['username'] }}"
+        ansible_password: "{{ creds['password'] }}"
+      no_log: True
+
+    - name: Time Stamp
+      set_fact:
+        time_stamp: "{{lookup('pipe','date \"+%m-%d-%Y_%H-%M\"')}}"
+      delegate_to: localhost
+
+    - name: Undo Changes from previous builds for {{ inventory_hostname }}
+      cisco.ios.ios_config:
+        src: CSR1000V_teardown.j2
+        save_when: changed
+      register: ntc_config_teardown
+
+    - name: configurable lines for {{ inventory_hostname }}
+      cisco.ios.ios_config:
+        src: CSR1000V_build.j2
+        save_when: changed
+      register: ntc_config
+
+    - name: Pause for 15 seconds for pees UP status
+      ansible.builtin.pause:
+        seconds: 15
+
+# Alows for complete logging of peer status
+
+    - name: Gather BGP Peering Status
+      cisco.ios.ios_command:
+        commands:
+        - show ip bgp summ
+      register: bgp_summ
+
+    - name: Generate Run Report
+      template:
+        src: log.j2
+        dest: "logs/{{ inventory_hostname }}-{{ time_stamp}}.txt"
+...

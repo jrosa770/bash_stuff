@@ -1,0 +1,15 @@
+# Ansible Generated Report
+
+Gathered for csr3 on 09-24-2022_03-36
+
+# Configuration Tasks:
+['interface GigabitEthernet2', 'description R:CSR1:Gi2:65512:10.10.13.0/30', 'ip address 10.10.13.2 255.255.255.252', 'no shutdown', 'interface GigabitEthernet3', 'description R:CSR3:Gi3:65513:10.10.23.0/28', 'ip address 10.10.23.3 255.255.255.248', 'no shutdown', 'router bgp 65513', 'bgp router-id 3.3.3.3', 'neighbor csr1 peer-group', 'neighbor csr1 remote-as 65511', 'neighbor 10.10.13.1 peer-group csr1', 'neighbor csr2 peer-group', 'neighbor csr2 remote-as 65512', 'neighbor 10.10.23.2 peer-group csr2']
+
+# Check Tasks:
+BGP Summary:
+-   - BGP router identifier 3.3.3.3, local AS number 65513
+    - BGP table version is 1, main routing table version 1
+    - ''
+    - Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+    - 10.10.13.1      4        65511       2       2        1    0    0 00:00:09        0
+    - 10.10.23.2      4        65512       2       2        1    0    0 00:00:07        0

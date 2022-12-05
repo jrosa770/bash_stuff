@@ -1,0 +1,10 @@
+# Ansible Generated Report
+
+Gathered for {{ inventory_hostname }} on {{ time_stamp }}
+
+# Configuration Tasks:
+{{ ntc_config.updates }}
+
+# Check Tasks:
+BGP Summary:
+{{ bgp_summ.stdout_lines | to_nice_yaml }}

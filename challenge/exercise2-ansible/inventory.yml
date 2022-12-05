@@ -1,0 +1,23 @@
+---
+ntc:
+  children:
+    cisco:
+
+cisco:
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+  children:
+    ios:
+
+ios:
+  vars:
+    ansible_network_os: cisco.ios.ios
+  children:
+    ios_routers:
+
+ios_routers:
+  hosts:
+    csr1:
+    csr2:
+    csr3:
+...

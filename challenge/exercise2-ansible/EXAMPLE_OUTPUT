@@ -1,0 +1,1185 @@
+2022-09-24 03:36:01,502 p=6192 u=ntc n=ansible | ansible-playbook [core 2.13.4]
+  config file = /home/ntc/challenge/exercise2-ansible/ansible.cfg
+  configured module search path = ['/home/ntc/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/ntc/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/ntc/.virtualenvs/ntc/bin/ansible-playbook
+  python version = 3.8.12 (default, Oct 13 2021, 09:22:51) [GCC 8.3.0]
+  jinja version = 3.1.2
+  libyaml = True
+2022-09-24 03:36:01,502 p=6192 u=ntc n=ansible | Using /home/ntc/challenge/exercise2-ansible/ansible.cfg as config file
+2022-09-24 03:36:01,503 p=6192 u=ntc n=ansible | setting up inventory plugins
+2022-09-24 03:36:01,508 p=6192 u=ntc n=ansible | host_list declined parsing /home/ntc/challenge/exercise2-ansible/inventory.yml as it did not pass its verify_file() method
+2022-09-24 03:36:01,508 p=6192 u=ntc n=ansible | script declined parsing /home/ntc/challenge/exercise2-ansible/inventory.yml as it did not pass its verify_file() method
+2022-09-24 03:36:01,511 p=6192 u=ntc n=ansible | Parsed /home/ntc/challenge/exercise2-ansible/inventory.yml inventory source with yaml plugin
+2022-09-24 03:36:01,607 p=6192 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:01,608 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:01,609 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:01,609 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:01,611 p=6192 u=ntc n=ansible | redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+2022-09-24 03:36:01,633 p=6192 u=ntc n=ansible | Loading collection community.general from /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible_collections/community/general
+2022-09-24 03:36:01,634 p=6192 u=ntc n=ansible | redirecting (type: callback) ansible.builtin.yaml to community.general.yaml
+2022-09-24 03:36:01,636 p=6192 u=ntc n=ansible | Loading callback plugin community.general.yaml of type stdout, v2.0 from /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible_collections/community/general/plugins/callback/yaml.py
+2022-09-24 03:36:01,666 p=6192 u=ntc n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2022-09-24 03:36:01,666 p=6192 u=ntc n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2022-09-24 03:36:01,666 p=6192 u=ntc n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2022-09-24 03:36:01,667 p=6192 u=ntc n=ansible | PLAYBOOK: pb_configure_network.yml *********************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:01,667 p=6192 u=ntc n=ansible | 1 plays in pb_configure_network.yml
+2022-09-24 03:36:01,668 p=6192 u=ntc n=ansible | PLAY [cisco] *******************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:01,682 p=6192 u=ntc n=ansible | META: ran handlers
+2022-09-24 03:36:01,698 p=6197 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:01,708 p=6198 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:01,717 p=6199 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:01,733 p=6197 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:01,740 p=6197 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:01,740 p=6197 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:01,740 p=6197 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:01,745 p=6198 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:01,751 p=6199 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:01,753 p=6198 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:01,753 p=6198 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:01,753 p=6198 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:01,758 p=6199 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:01,758 p=6199 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:01,758 p=6199 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:02,139 p=6211 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,160 p=6214 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,167 p=6211 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:02,178 p=6217 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,193 p=6214 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:02,208 p=6217 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:02,210 p=6199 u=ntc n=ansible | <csr3> local domain socket does not exist, starting it
+2022-09-24 03:36:02,210 p=6199 u=ntc n=ansible | <csr3> control socket path is /home/ntc/.ansible/pc/3767518a80
+2022-09-24 03:36:02,210 p=6199 u=ntc n=ansible | <csr3> Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> local domain socket listeners started successfully
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | network_os is set to cisco.ios.ios
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> ssh type is set to auto
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> autodetecting ssh_type
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> ssh type is now set to paramiko
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:02,211 p=6199 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/3767518a80
+2022-09-24 03:36:02,216 p=6192 u=ntc n=ansible | TASK [Creds] *******************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:02,216 p=6192 u=ntc n=ansible | ok: [csr3] => changed=false 
+  ansible_facts:
+    creds:
+      password: ntc123
+      username: ntc
+  ansible_included_var_files:
+  - /home/ntc/challenge/exercise2-ansible/secrets.yml
+2022-09-24 03:36:02,242 p=6197 u=ntc n=ansible | <csr1> local domain socket does not exist, starting it
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | <csr1> control socket path is /home/ntc/.ansible/pc/81332e834d
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | <csr1> Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | <csr1> Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | <csr1> local domain socket listeners started successfully
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | <csr1> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | network_os is set to cisco.ios.ios
+2022-09-24 03:36:02,243 p=6197 u=ntc n=ansible | <csr1> ssh type is set to auto
+2022-09-24 03:36:02,244 p=6197 u=ntc n=ansible | <csr1> autodetecting ssh_type
+2022-09-24 03:36:02,244 p=6197 u=ntc n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2022-09-24 03:36:02,244 p=6197 u=ntc n=ansible | <csr1> ssh type is now set to paramiko
+2022-09-24 03:36:02,244 p=6197 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:02,244 p=6197 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/81332e834d
+2022-09-24 03:36:02,250 p=6192 u=ntc n=ansible | ok: [csr1] => changed=false 
+  ansible_facts:
+    creds:
+      password: ntc123
+      username: ntc
+  ansible_included_var_files:
+  - /home/ntc/challenge/exercise2-ansible/secrets.yml
+2022-09-24 03:36:02,256 p=6198 u=ntc n=ansible | <csr2> local domain socket does not exist, starting it
+2022-09-24 03:36:02,256 p=6198 u=ntc n=ansible | <csr2> control socket path is /home/ntc/.ansible/pc/42b3abb84e
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> local domain socket listeners started successfully
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | network_os is set to cisco.ios.ios
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> ssh type is set to auto
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> autodetecting ssh_type
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> ssh type is now set to paramiko
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:02,257 p=6198 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/42b3abb84e
+2022-09-24 03:36:02,261 p=6192 u=ntc n=ansible | ok: [csr2] => changed=false 
+  ansible_facts:
+    creds:
+      password: ntc123
+      username: ntc
+  ansible_included_var_files:
+  - /home/ntc/challenge/exercise2-ansible/secrets.yml
+2022-09-24 03:36:02,278 p=6221 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,286 p=6222 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,295 p=6223 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,332 p=6222 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:02,332 p=6221 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:02,339 p=6222 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:02,339 p=6222 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:02,339 p=6222 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:02,340 p=6223 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:02,340 p=6221 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:02,340 p=6221 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:02,340 p=6221 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:02,347 p=6223 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:02,347 p=6223 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:02,347 p=6223 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:02,732 p=6222 u=ntc n=ansible | <csr2> found existing local domain socket, using it!
+2022-09-24 03:36:02,732 p=6222 u=ntc n=ansible | <csr2> updating play_context for connection
+2022-09-24 03:36:02,733 p=6222 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:02,733 p=6222 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/42b3abb84e
+2022-09-24 03:36:02,738 p=6192 u=ntc n=ansible | TASK [Host Specific Vars] ******************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:02,739 p=6192 u=ntc n=ansible | ok: [csr2] => changed=false 
+  ansible_facts:
+    bgp:
+    - asn: 65512
+      rid: 2.2.2.2
+    bgp_neighbors:
+    - name: csr1
+      peer_ip: 10.10.12.1
+      remote_asn: 65511
+      state: up
+    - name: csr3
+      peer_ip: 10.10.23.3
+      remote_asn: 65513
+      state: up
+    interfaces:
+    - description: CSR3:Gi3:65513:10.10.23.0/28
+      ip_address: 10.10.23.2 255.255.255.248
+      name: GigabitEthernet3
+      state: up
+    - description: R:CSR2:Gi4:65513:10.10.12.0/30
+      ip_address: 10.10.12.2 255.255.255.252
+      name: GigabitEthernet4
+      state: up
+  ansible_included_var_files:
+  - /home/ntc/challenge/exercise2-ansible/csr2_vars.yml
+2022-09-24 03:36:02,758 p=6221 u=ntc n=ansible | <csr1> found existing local domain socket, using it!
+2022-09-24 03:36:02,759 p=6221 u=ntc n=ansible | <csr1> updating play_context for connection
+2022-09-24 03:36:02,759 p=6221 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:02,759 p=6221 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/81332e834d
+2022-09-24 03:36:02,765 p=6192 u=ntc n=ansible | ok: [csr1] => changed=false 
+  ansible_facts:
+    bgp:
+    - asn: 65511
+      rid: 1.1.1.1
+    bgp_neighbors:
+    - name: csr2
+      peer_ip: 10.10.12.2
+      remote_asn: 65512
+      state: up
+    - name: csr3
+      peer_ip: 10.10.13.2
+      remote_asn: 65513
+      state: up
+    interfaces:
+    - description: R:CSR3:Gi2:65512:10.10.13.2/30
+      ip_address: 10.10.13.1 255.255.255.252
+      name: GigabitEthernet2
+      state: up
+    - description: R:CSR2:Gi4:65513:10.10.12.0/30
+      ip_address: 10.10.12.1 255.255.255.252
+      name: GigabitEthernet4
+      state: up
+  ansible_included_var_files:
+  - /home/ntc/challenge/exercise2-ansible/csr1_vars.yml
+2022-09-24 03:36:02,796 p=6223 u=ntc n=ansible | <csr3> found existing local domain socket, using it!
+2022-09-24 03:36:02,796 p=6223 u=ntc n=ansible | <csr3> updating play_context for connection
+2022-09-24 03:36:02,796 p=6223 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:02,796 p=6223 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/3767518a80
+2022-09-24 03:36:02,802 p=6192 u=ntc n=ansible | ok: [csr3] => changed=false 
+  ansible_facts:
+    bgp:
+    - asn: 65513
+      rid: 3.3.3.3
+    bgp_neighbors:
+    - name: csr1
+      peer_ip: 10.10.13.1
+      remote_asn: 65511
+      state: up
+    - name: csr2
+      peer_ip: 10.10.23.2
+      remote_asn: 65512
+      state: up
+    interfaces:
+    - description: R:CSR1:Gi2:65512:10.10.13.0/30
+      ip_address: 10.10.13.2 255.255.255.252
+      name: GigabitEthernet2
+      state: up
+    - description: R:CSR3:Gi3:65513:10.10.23.0/28
+      ip_address: 10.10.23.3 255.255.255.248
+      name: GigabitEthernet3
+      state: up
+  ansible_included_var_files:
+  - /home/ntc/challenge/exercise2-ansible/csr3_vars.yml
+2022-09-24 03:36:02,834 p=6236 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,842 p=6237 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,848 p=6238 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:02,866 p=6236 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:02,873 p=6236 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:02,873 p=6236 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:02,873 p=6236 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:02,876 p=6237 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:02,879 p=6238 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:02,884 p=6237 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:02,884 p=6237 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:02,884 p=6237 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:02,886 p=6238 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:02,886 p=6238 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:02,886 p=6238 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:03,289 p=6236 u=ntc n=ansible | <csr1> found existing local domain socket, using it!
+2022-09-24 03:36:03,289 p=6236 u=ntc n=ansible | <csr1> updating play_context for connection
+2022-09-24 03:36:03,290 p=6236 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:03,290 p=6236 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/81332e834d
+2022-09-24 03:36:03,293 p=6192 u=ntc n=ansible | TASK [username and Password] ***************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:03,294 p=6192 u=ntc n=ansible | ok: [csr1] => changed=false 
+  censored: 'the output has been hidden due to the fact that ''no_log: true'' was specified for this result'
+2022-09-24 03:36:03,316 p=6238 u=ntc n=ansible | <csr3> found existing local domain socket, using it!
+2022-09-24 03:36:03,317 p=6238 u=ntc n=ansible | <csr3> updating play_context for connection
+2022-09-24 03:36:03,317 p=6238 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:03,317 p=6238 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/3767518a80
+2022-09-24 03:36:03,317 p=6237 u=ntc n=ansible | <csr2> found existing local domain socket, using it!
+2022-09-24 03:36:03,317 p=6237 u=ntc n=ansible | <csr2> updating play_context for connection
+2022-09-24 03:36:03,317 p=6237 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:03,318 p=6237 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/42b3abb84e
+2022-09-24 03:36:03,321 p=6192 u=ntc n=ansible | ok: [csr3] => changed=false 
+  censored: 'the output has been hidden due to the fact that ''no_log: true'' was specified for this result'
+2022-09-24 03:36:03,321 p=6192 u=ntc n=ansible | ok: [csr2] => changed=false 
+  censored: 'the output has been hidden due to the fact that ''no_log: true'' was specified for this result'
+2022-09-24 03:36:03,350 p=6251 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:03,352 p=6251 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,366 p=6254 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:03,368 p=6192 u=ntc n=ansible | TASK [Time Stamp] **************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:03,368 p=6254 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,369 p=6192 u=ntc n=ansible | ok: [csr1 -> localhost] => changed=false 
+  ansible_facts:
+    time_stamp: 09-24-2022_03-36
+2022-09-24 03:36:03,373 p=6192 u=ntc n=ansible | ok: [csr2 -> localhost] => changed=false 
+  ansible_facts:
+    time_stamp: 09-24-2022_03-36
+2022-09-24 03:36:03,383 p=6258 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:03,385 p=6258 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,390 p=6192 u=ntc n=ansible | ok: [csr3 -> localhost] => changed=false 
+  ansible_facts:
+    time_stamp: 09-24-2022_03-36
+2022-09-24 03:36:03,397 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,399 p=6192 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,419 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,428 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,445 p=6263 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:03,452 p=6263 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:03,452 p=6263 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:03,452 p=6263 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:03,453 p=6264 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:03,460 p=6264 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:03,460 p=6264 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:03,461 p=6264 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:03,464 p=6265 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:03,471 p=6265 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:03,471 p=6265 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:03,471 p=6265 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:03,850 p=6277 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,859 p=6280 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,864 p=6283 u=ntc n=ansible | Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,879 p=6277 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:03,891 p=6280 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:03,896 p=6283 u=ntc n=ansible | Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> local domain socket does not exist, starting it
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> control socket path is /home/ntc/.ansible/pc/4583268dc7
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> local domain socket listeners started successfully
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | network_os is set to cisco.ios.ios
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> ssh type is set to auto
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | <csr2> autodetecting ssh_type
+2022-09-24 03:36:03,923 p=6264 u=ntc n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2022-09-24 03:36:03,924 p=6264 u=ntc n=ansible | <csr2> ssh type is now set to paramiko
+2022-09-24 03:36:03,924 p=6264 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:03,924 p=6264 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/4583268dc7
+2022-09-24 03:36:03,925 p=6264 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,925 p=6264 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,928 p=6264 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:03,930 p=6264 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_config  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_config.py
+2022-09-24 03:36:03,930 p=6264 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_config
+2022-09-24 03:36:03,931 p=6277 u=ntc n=ansible | <csr2> ESTABLISH PARAMIKO SSH CONNECTION FOR USER: ntc on PORT 22 TO csr2
+2022-09-24 03:36:03,934 p=6277 u=ntc n=p=6277 u=ntc | paramiko [csr2] | Connected (version 1.99, client Cisco-1.25)
+2022-09-24 03:36:03,948 p=6265 u=ntc n=ansible | <csr3> local domain socket does not exist, starting it
+2022-09-24 03:36:03,948 p=6265 u=ntc n=ansible | <csr3> control socket path is /home/ntc/.ansible/pc/1abba0235d
+2022-09-24 03:36:03,948 p=6265 u=ntc n=ansible | <csr3> Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> local domain socket listeners started successfully
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | network_os is set to cisco.ios.ios
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> ssh type is set to auto
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> autodetecting ssh_type
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> ssh type is now set to paramiko
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:03,949 p=6265 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/1abba0235d
+2022-09-24 03:36:03,951 p=6265 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,951 p=6265 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,951 p=6263 u=ntc n=ansible | <csr1> local domain socket does not exist, starting it
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> control socket path is /home/ntc/.ansible/pc/8b41b1181d
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> Loading collection ansible.netcommon from /home/ntc/.ansible/collections/ansible_collections/ansible/netcommon
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> Loading collection cisco.ios from /home/ntc/.ansible/collections/ansible_collections/cisco/ios
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> local domain socket listeners started successfully
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> loaded cliconf plugin ansible_collections.cisco.ios.plugins.cliconf.ios from path /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/cliconf/ios.py for network_os cisco.ios.ios
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | network_os is set to cisco.ios.ios
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> ssh type is set to auto
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> autodetecting ssh_type
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | [WARNING]: ansible-pylibssh not installed, falling back to paramiko
+
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> ssh type is now set to paramiko
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:03,952 p=6263 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/8b41b1181d
+2022-09-24 03:36:03,953 p=6263 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,954 p=6263 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:03,954 p=6265 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:03,956 p=6263 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:03,956 p=6265 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_config  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_config.py
+2022-09-24 03:36:03,957 p=6265 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_config
+2022-09-24 03:36:03,958 p=6280 u=ntc n=ansible | <csr3> ESTABLISH PARAMIKO SSH CONNECTION FOR USER: ntc on PORT 22 TO csr3
+2022-09-24 03:36:03,958 p=6263 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_config  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_config.py
+2022-09-24 03:36:03,959 p=6263 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_config
+2022-09-24 03:36:03,960 p=6283 u=ntc n=ansible | <csr1> ESTABLISH PARAMIKO SSH CONNECTION FOR USER: ntc on PORT 22 TO csr1
+2022-09-24 03:36:03,961 p=6280 u=ntc n=p=6280 u=ntc | paramiko [csr3] | Connected (version 1.99, client Cisco-1.25)
+2022-09-24 03:36:03,963 p=6283 u=ntc n=p=6283 u=ntc | paramiko [csr1] | Connected (version 1.99, client Cisco-1.25)
+2022-09-24 03:36:03,976 p=6277 u=ntc n=p=6277 u=ntc | paramiko [csr2] | Authentication (password) successful!
+2022-09-24 03:36:04,003 p=6280 u=ntc n=p=6280 u=ntc | paramiko [csr3] | Authentication (password) successful!
+2022-09-24 03:36:04,004 p=6283 u=ntc n=p=6283 u=ntc | paramiko [csr1] | Authentication (password) successful!
+2022-09-24 03:36:06,162 p=6264 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:06,165 p=6192 u=ntc n=ansible | TASK [Undo Changes from previous builds for csr1] ******************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:06,165 p=6192 u=ntc n=ansible | [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device including the indentation
+
+2022-09-24 03:36:06,167 p=6192 u=ntc n=ansible | changed: [csr2] => changed=true 
+  banners: {}
+  commands:
+  - default interface GigabitEthernet3
+  - default interface GigabitEthernet4
+  - no router bgp 65512
+  invocation:
+    module_args:
+      after: null
+      backup: false
+      backup_options: null
+      before: null
+      defaults: false
+      diff_against: null
+      diff_ignore_lines: null
+      intended_config: null
+      lines: null
+      match: line
+      multiline_delimiter: '@'
+      parents: null
+      provider: null
+      replace: line
+      running_config: null
+      save_when: changed
+      src: |-
+        !
+        default interface GigabitEthernet3
+        !
+        default interface GigabitEthernet4
+        !
+        !
+        no router bgp 65512
+        !
+  updates:
+  - default interface GigabitEthernet3
+  - default interface GigabitEthernet4
+  - no router bgp 65512
+2022-09-24 03:36:06,306 p=6265 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:06,309 p=6192 u=ntc n=ansible | changed: [csr3] => changed=true 
+  banners: {}
+  commands:
+  - default interface GigabitEthernet2
+  - default interface GigabitEthernet3
+  - no router bgp 65513
+  invocation:
+    module_args:
+      after: null
+      backup: false
+      backup_options: null
+      before: null
+      defaults: false
+      diff_against: null
+      diff_ignore_lines: null
+      intended_config: null
+      lines: null
+      match: line
+      multiline_delimiter: '@'
+      parents: null
+      provider: null
+      replace: line
+      running_config: null
+      save_when: changed
+      src: |-
+        !
+        default interface GigabitEthernet2
+        !
+        default interface GigabitEthernet3
+        !
+        !
+        no router bgp 65513
+        !
+  updates:
+  - default interface GigabitEthernet2
+  - default interface GigabitEthernet3
+  - no router bgp 65513
+2022-09-24 03:36:06,311 p=6263 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:06,313 p=6192 u=ntc n=ansible | changed: [csr1] => changed=true 
+  banners: {}
+  commands:
+  - default interface GigabitEthernet2
+  - default interface GigabitEthernet4
+  - no router bgp 65511
+  invocation:
+    module_args:
+      after: null
+      backup: false
+      backup_options: null
+      before: null
+      defaults: false
+      diff_against: null
+      diff_ignore_lines: null
+      intended_config: null
+      lines: null
+      match: line
+      multiline_delimiter: '@'
+      parents: null
+      provider: null
+      replace: line
+      running_config: null
+      save_when: changed
+      src: |-
+        !
+        default interface GigabitEthernet2
+        !
+        default interface GigabitEthernet4
+        !
+        !
+        no router bgp 65511
+        !
+  updates:
+  - default interface GigabitEthernet2
+  - default interface GigabitEthernet4
+  - no router bgp 65511
+2022-09-24 03:36:06,324 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,340 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,350 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,363 p=6293 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:06,370 p=6293 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:06,370 p=6293 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:06,370 p=6293 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:06,380 p=6294 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:06,386 p=6295 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:06,388 p=6294 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:06,388 p=6294 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:06,388 p=6294 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:06,394 p=6295 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:06,394 p=6295 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:06,394 p=6295 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:06,786 p=6293 u=ntc n=ansible | <csr1> found existing local domain socket, using it!
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> invoked shell using ssh_type: paramiko
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> ssh connection done, setting terminal
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> loaded terminal plugin for network_os cisco.ios.ios
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> firing event: on_become
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> firing event: on_open_shell()
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> ssh connection has completed successfully
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,787 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> updating play_context for connection
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:06,788 p=6293 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/8b41b1181d
+2022-09-24 03:36:06,789 p=6293 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,789 p=6293 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,796 p=6293 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:06,798 p=6293 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_config  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_config.py
+2022-09-24 03:36:06,798 p=6295 u=ntc n=ansible | <csr3> found existing local domain socket, using it!
+2022-09-24 03:36:06,798 p=6293 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_config
+2022-09-24 03:36:06,798 p=6295 u=ntc n=ansible | <csr3> invoked shell using ssh_type: paramiko
+2022-09-24 03:36:06,798 p=6295 u=ntc n=ansible | <csr3> ssh connection done, setting terminal
+2022-09-24 03:36:06,798 p=6295 u=ntc n=ansible | <csr3> loaded terminal plugin for network_os cisco.ios.ios
+2022-09-24 03:36:06,798 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,798 p=6295 u=ntc n=ansible | <csr3> firing event: on_become
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> firing event: on_open_shell()
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> ssh connection has completed successfully
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> updating play_context for connection
+2022-09-24 03:36:06,799 p=6295 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:06,800 p=6295 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/1abba0235d
+2022-09-24 03:36:06,801 p=6295 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,801 p=6295 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,807 p=6295 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:06,808 p=6295 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_config  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_config.py
+2022-09-24 03:36:06,809 p=6295 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_config
+2022-09-24 03:36:06,814 p=6294 u=ntc n=ansible | <csr2> found existing local domain socket, using it!
+2022-09-24 03:36:06,814 p=6294 u=ntc n=ansible | <csr2> invoked shell using ssh_type: paramiko
+2022-09-24 03:36:06,814 p=6294 u=ntc n=ansible | <csr2> ssh connection done, setting terminal
+2022-09-24 03:36:06,814 p=6294 u=ntc n=ansible | <csr2> loaded terminal plugin for network_os cisco.ios.ios
+2022-09-24 03:36:06,814 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,814 p=6294 u=ntc n=ansible | <csr2> firing event: on_become
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> firing event: on_open_shell()
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> ssh connection has completed successfully
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,815 p=6294 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:06,816 p=6294 u=ntc n=ansible | <csr2> updating play_context for connection
+2022-09-24 03:36:06,816 p=6294 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:06,816 p=6294 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/4583268dc7
+2022-09-24 03:36:06,817 p=6294 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,817 p=6294 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_config to cisco.ios.ios
+2022-09-24 03:36:06,823 p=6294 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:06,825 p=6294 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_config  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_config.py
+2022-09-24 03:36:06,825 p=6294 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_config
+2022-09-24 03:36:09,717 p=6293 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:09,720 p=6192 u=ntc n=ansible | TASK [configurable lines for csr1] *********************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:09,721 p=6192 u=ntc n=ansible | changed: [csr1] => changed=true 
+  banners: {}
+  commands:
+  - interface GigabitEthernet2
+  - description R:CSR3:Gi2:65512:10.10.13.2/30
+  - ip address 10.10.13.1 255.255.255.252
+  - no shutdown
+  - interface GigabitEthernet4
+  - description R:CSR2:Gi4:65513:10.10.12.0/30
+  - ip address 10.10.12.1 255.255.255.252
+  - no shutdown
+  - router bgp 65511
+  - bgp router-id 1.1.1.1
+  - neighbor csr2 peer-group
+  - neighbor csr2 remote-as 65512
+  - neighbor 10.10.12.2 peer-group csr2
+  - neighbor csr3 peer-group
+  - neighbor csr3 remote-as 65513
+  - neighbor 10.10.13.2 peer-group csr3
+  invocation:
+    module_args:
+      after: null
+      backup: false
+      backup_options: null
+      before: null
+      defaults: false
+      diff_against: null
+      diff_ignore_lines: null
+      intended_config: null
+      lines: null
+      match: line
+      multiline_delimiter: '@'
+      parents: null
+      provider: null
+      replace: line
+      running_config: null
+      save_when: changed
+      src: |-
+        !
+        interface GigabitEthernet2
+          description R:CSR3:Gi2:65512:10.10.13.2/30
+          ip address 10.10.13.1 255.255.255.252
+          no shutdown
+        !
+        interface GigabitEthernet4
+          description R:CSR2:Gi4:65513:10.10.12.0/30
+          ip address 10.10.12.1 255.255.255.252
+          no shutdown
+        !
+        !
+        router bgp 65511
+          bgp router-id 1.1.1.1
+          !
+        neighbor csr2 peer-group
+        neighbor csr2 remote-as 65512
+        neighbor 10.10.12.2 peer-group csr2
+        !
+        neighbor csr3 peer-group
+        neighbor csr3 remote-as 65513
+        neighbor 10.10.13.2 peer-group csr3
+        !
+  updates:
+  - interface GigabitEthernet2
+  - description R:CSR3:Gi2:65512:10.10.13.2/30
+  - ip address 10.10.13.1 255.255.255.252
+  - no shutdown
+  - interface GigabitEthernet4
+  - description R:CSR2:Gi4:65513:10.10.12.0/30
+  - ip address 10.10.12.1 255.255.255.252
+  - no shutdown
+  - router bgp 65511
+  - bgp router-id 1.1.1.1
+  - neighbor csr2 peer-group
+  - neighbor csr2 remote-as 65512
+  - neighbor 10.10.12.2 peer-group csr2
+  - neighbor csr3 peer-group
+  - neighbor csr3 remote-as 65513
+  - neighbor 10.10.13.2 peer-group csr3
+2022-09-24 03:36:09,752 p=6295 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:09,755 p=6192 u=ntc n=ansible | changed: [csr3] => changed=true 
+  banners: {}
+  commands:
+  - interface GigabitEthernet2
+  - description R:CSR1:Gi2:65512:10.10.13.0/30
+  - ip address 10.10.13.2 255.255.255.252
+  - no shutdown
+  - interface GigabitEthernet3
+  - description R:CSR3:Gi3:65513:10.10.23.0/28
+  - ip address 10.10.23.3 255.255.255.248
+  - no shutdown
+  - router bgp 65513
+  - bgp router-id 3.3.3.3
+  - neighbor csr1 peer-group
+  - neighbor csr1 remote-as 65511
+  - neighbor 10.10.13.1 peer-group csr1
+  - neighbor csr2 peer-group
+  - neighbor csr2 remote-as 65512
+  - neighbor 10.10.23.2 peer-group csr2
+  invocation:
+    module_args:
+      after: null
+      backup: false
+      backup_options: null
+      before: null
+      defaults: false
+      diff_against: null
+      diff_ignore_lines: null
+      intended_config: null
+      lines: null
+      match: line
+      multiline_delimiter: '@'
+      parents: null
+      provider: null
+      replace: line
+      running_config: null
+      save_when: changed
+      src: |-
+        !
+        interface GigabitEthernet2
+          description R:CSR1:Gi2:65512:10.10.13.0/30
+          ip address 10.10.13.2 255.255.255.252
+          no shutdown
+        !
+        interface GigabitEthernet3
+          description R:CSR3:Gi3:65513:10.10.23.0/28
+          ip address 10.10.23.3 255.255.255.248
+          no shutdown
+        !
+        !
+        router bgp 65513
+          bgp router-id 3.3.3.3
+          !
+        neighbor csr1 peer-group
+        neighbor csr1 remote-as 65511
+        neighbor 10.10.13.1 peer-group csr1
+        !
+        neighbor csr2 peer-group
+        neighbor csr2 remote-as 65512
+        neighbor 10.10.23.2 peer-group csr2
+        !
+  updates:
+  - interface GigabitEthernet2
+  - description R:CSR1:Gi2:65512:10.10.13.0/30
+  - ip address 10.10.13.2 255.255.255.252
+  - no shutdown
+  - interface GigabitEthernet3
+  - description R:CSR3:Gi3:65513:10.10.23.0/28
+  - ip address 10.10.23.3 255.255.255.248
+  - no shutdown
+  - router bgp 65513
+  - bgp router-id 3.3.3.3
+  - neighbor csr1 peer-group
+  - neighbor csr1 remote-as 65511
+  - neighbor 10.10.13.1 peer-group csr1
+  - neighbor csr2 peer-group
+  - neighbor csr2 remote-as 65512
+  - neighbor 10.10.23.2 peer-group csr2
+2022-09-24 03:36:09,801 p=6294 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:09,804 p=6192 u=ntc n=ansible | changed: [csr2] => changed=true 
+  banners: {}
+  commands:
+  - interface GigabitEthernet3
+  - description CSR3:Gi3:65513:10.10.23.0/28
+  - ip address 10.10.23.2 255.255.255.248
+  - no shutdown
+  - interface GigabitEthernet4
+  - description R:CSR2:Gi4:65513:10.10.12.0/30
+  - ip address 10.10.12.2 255.255.255.252
+  - no shutdown
+  - router bgp 65512
+  - bgp router-id 2.2.2.2
+  - neighbor csr1 peer-group
+  - neighbor csr1 remote-as 65511
+  - neighbor 10.10.12.1 peer-group csr1
+  - neighbor csr3 peer-group
+  - neighbor csr3 remote-as 65513
+  - neighbor 10.10.23.3 peer-group csr3
+  invocation:
+    module_args:
+      after: null
+      backup: false
+      backup_options: null
+      before: null
+      defaults: false
+      diff_against: null
+      diff_ignore_lines: null
+      intended_config: null
+      lines: null
+      match: line
+      multiline_delimiter: '@'
+      parents: null
+      provider: null
+      replace: line
+      running_config: null
+      save_when: changed
+      src: |-
+        !
+        interface GigabitEthernet3
+          description CSR3:Gi3:65513:10.10.23.0/28
+          ip address 10.10.23.2 255.255.255.248
+          no shutdown
+        !
+        interface GigabitEthernet4
+          description R:CSR2:Gi4:65513:10.10.12.0/30
+          ip address 10.10.12.2 255.255.255.252
+          no shutdown
+        !
+        !
+        router bgp 65512
+          bgp router-id 2.2.2.2
+          !
+        neighbor csr1 peer-group
+        neighbor csr1 remote-as 65511
+        neighbor 10.10.12.1 peer-group csr1
+        !
+        neighbor csr3 peer-group
+        neighbor csr3 remote-as 65513
+        neighbor 10.10.23.3 peer-group csr3
+        !
+  updates:
+  - interface GigabitEthernet3
+  - description CSR3:Gi3:65513:10.10.23.0/28
+  - ip address 10.10.23.2 255.255.255.248
+  - no shutdown
+  - interface GigabitEthernet4
+  - description R:CSR2:Gi4:65513:10.10.12.0/30
+  - ip address 10.10.12.2 255.255.255.252
+  - no shutdown
+  - router bgp 65512
+  - bgp router-id 2.2.2.2
+  - neighbor csr1 peer-group
+  - neighbor csr1 remote-as 65511
+  - neighbor 10.10.12.1 peer-group csr1
+  - neighbor csr3 peer-group
+  - neighbor csr3 remote-as 65513
+  - neighbor 10.10.23.3 peer-group csr3
+2022-09-24 03:36:09,849 p=6308 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:09,856 p=6308 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:09,856 p=6308 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:09,856 p=6308 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:10,277 p=6308 u=ntc n=ansible | <csr1> found existing local domain socket, using it!
+2022-09-24 03:36:10,277 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,277 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,277 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,277 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,278 p=6308 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:10,279 p=6308 u=ntc n=ansible | <csr1> updating play_context for connection
+2022-09-24 03:36:10,279 p=6308 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:10,279 p=6308 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/8b41b1181d
+2022-09-24 03:36:10,281 p=6308 u=ntc n=ansible | Pausing for 15 seconds
+2022-09-24 03:36:10,281 p=6308 u=ntc n=ansible | (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2022-09-24 03:36:25,283 p=6192 u=ntc n=ansible | TASK [Pause for 15 seconds for pees UP status] *********************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:25,283 p=6192 u=ntc n=ansible | ok: [csr1] => changed=false 
+  delta: 15
+  echo: true
+  rc: 0
+  start: '2022-09-24 03:36:10.280950'
+  stderr: ''
+  stdout: Paused for 15.0 seconds
+  stop: '2022-09-24 03:36:25.281082'
+  user_input: ''
+2022-09-24 03:36:25,290 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,300 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,310 p=6192 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,326 p=6313 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:25,333 p=6313 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:25,334 p=6313 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:25,334 p=6313 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:25,335 p=6314 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:25,341 p=6314 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:25,342 p=6314 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:25,342 p=6314 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:25,343 p=6315 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:25,350 p=6315 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:25,350 p=6315 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:25,351 p=6315 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:25,739 p=6314 u=ntc n=ansible | <csr2> found existing local domain socket, using it!
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,740 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> updating play_context for connection
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:25,741 p=6314 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/4583268dc7
+2022-09-24 03:36:25,742 p=6314 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,742 p=6314 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,743 p=6314 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:25,746 p=6314 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_command  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_command.py
+2022-09-24 03:36:25,746 p=6314 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_command
+2022-09-24 03:36:25,757 p=6313 u=ntc n=ansible | <csr1> found existing local domain socket, using it!
+2022-09-24 03:36:25,757 p=6313 u=ntc n=ansible | <csr1> updating play_context for connection
+2022-09-24 03:36:25,757 p=6313 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:25,757 p=6313 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/8b41b1181d
+2022-09-24 03:36:25,758 p=6313 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,758 p=6313 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,758 p=6313 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:25,762 p=6313 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_command  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_command.py
+2022-09-24 03:36:25,762 p=6313 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_command
+2022-09-24 03:36:25,778 p=6315 u=ntc n=ansible | <csr3> found existing local domain socket, using it!
+2022-09-24 03:36:25,778 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,778 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,779 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,780 p=6315 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:25,780 p=6315 u=ntc n=ansible | <csr3> updating play_context for connection
+2022-09-24 03:36:25,780 p=6315 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:25,780 p=6315 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/1abba0235d
+2022-09-24 03:36:25,781 p=6315 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,781 p=6315 u=ntc n=ansible | redirecting (type: action) cisco.ios.ios_command to cisco.ios.ios
+2022-09-24 03:36:25,781 p=6315 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: enabled
+2022-09-24 03:36:25,784 p=6315 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: found cisco.ios.ios_command  at /home/ntc/.ansible/collections/ansible_collections/cisco/ios/plugins/modules/ios_command.py
+2022-09-24 03:36:25,785 p=6315 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: running cisco.ios.ios_command
+2022-09-24 03:36:25,854 p=6314 u=ntc n=ansible | <csr2> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:25,857 p=6192 u=ntc n=ansible | TASK [Gather BGP Peering Status] ***********************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:25,857 p=6192 u=ntc n=ansible | ok: [csr2] => changed=false 
+  invocation:
+    module_args:
+      commands:
+      - show ip bgp summ
+      interval: 1
+      match: all
+      provider: null
+      retries: 10
+      wait_for: null
+  stdout:
+  - |-
+    BGP router identifier 2.2.2.2, local AS number 65512
+    BGP table version is 1, main routing table version 1
+  
+    Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+    10.10.12.1      4        65511       2       2        1    0    0 00:00:07        0
+    10.10.23.3      4        65513       2       2        1    0    0 00:00:07        0
+  stdout_lines: <omitted>
+2022-09-24 03:36:25,870 p=6313 u=ntc n=ansible | <csr1> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:25,872 p=6192 u=ntc n=ansible | ok: [csr1] => changed=false 
+  invocation:
+    module_args:
+      commands:
+      - show ip bgp summ
+      interval: 1
+      match: all
+      provider: null
+      retries: 10
+      wait_for: null
+  stdout:
+  - |-
+    BGP router identifier 1.1.1.1, local AS number 65511
+    BGP table version is 1, main routing table version 1
+  
+    Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+    10.10.12.2      4        65512       2       2        1    0    0 00:00:07        0
+    10.10.13.2      4        65513       2       2        1    0    0 00:00:09        0
+  stdout_lines: <omitted>
+2022-09-24 03:36:25,892 p=6315 u=ntc n=ansible | <csr3> ANSIBLE_NETWORK_IMPORT_MODULES: complete
+2022-09-24 03:36:25,894 p=6192 u=ntc n=ansible | ok: [csr3] => changed=false 
+  invocation:
+    module_args:
+      commands:
+      - show ip bgp summ
+      interval: 1
+      match: all
+      provider: null
+      retries: 10
+      wait_for: null
+  stdout:
+  - |-
+    BGP router identifier 3.3.3.3, local AS number 65513
+    BGP table version is 1, main routing table version 1
+  
+    Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+    10.10.13.1      4        65511       2       2        1    0    0 00:00:09        0
+    10.10.23.2      4        65512       2       2        1    0    0 00:00:07        0
+  stdout_lines: <omitted>
+2022-09-24 03:36:25,940 p=6328 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:25,944 p=6329 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:25,948 p=6328 u=ntc n=ansible | <csr1> attempting to start connection
+2022-09-24 03:36:25,948 p=6328 u=ntc n=ansible | <csr1> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:25,948 p=6328 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:25,952 p=6329 u=ntc n=ansible | <csr2> attempting to start connection
+2022-09-24 03:36:25,952 p=6329 u=ntc n=ansible | <csr2> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:25,952 p=6329 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:25,953 p=6330 u=ntc n=ansible | redirecting (type: become) ansible.builtin.enable to ansible.netcommon.enable
+2022-09-24 03:36:25,961 p=6330 u=ntc n=ansible | <csr3> attempting to start connection
+2022-09-24 03:36:25,961 p=6330 u=ntc n=ansible | <csr3> using connection plugin ansible.netcommon.network_cli
+2022-09-24 03:36:25,961 p=6330 u=ntc n=ansible | Found ansible-connection at path /home/ntc/.virtualenvs/ntc/bin/ansible-connection
+2022-09-24 03:36:26,360 p=6330 u=ntc n=ansible | <csr3> found existing local domain socket, using it!
+2022-09-24 03:36:26,360 p=6330 u=ntc n=ansible | <csr3> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:26,360 p=6330 u=ntc n=ansible | <csr3> updating play_context for connection
+2022-09-24 03:36:26,360 p=6330 u=ntc n=ansible | <csr3> 
+2022-09-24 03:36:26,360 p=6330 u=ntc n=ansible | <csr3> local domain socket path is /home/ntc/.ansible/pc/1abba0235d
+2022-09-24 03:36:26,362 p=6330 u=ntc n=ansible | <csr3> ESTABLISH LOCAL CONNECTION FOR USER: ntc
+2022-09-24 03:36:26,362 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3 `"&& mkdir "` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659 `" && echo ansible-tmp-1663990586.36266-6330-141067998826659="` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659 `" ) && sleep 0'
+2022-09-24 03:36:26,364 p=6328 u=ntc n=ansible | <csr1> found existing local domain socket, using it!
+2022-09-24 03:36:26,364 p=6328 u=ntc n=ansible | <csr1> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:26,364 p=6328 u=ntc n=ansible | <csr1> updating play_context for connection
+2022-09-24 03:36:26,365 p=6328 u=ntc n=ansible | <csr1> 
+2022-09-24 03:36:26,365 p=6328 u=ntc n=ansible | <csr1> local domain socket path is /home/ntc/.ansible/pc/8b41b1181d
+2022-09-24 03:36:26,365 p=6329 u=ntc n=ansible | <csr2> found existing local domain socket, using it!
+2022-09-24 03:36:26,365 p=6329 u=ntc n=ansible | <csr2> Response received, triggered 'persistent_buffer_read_timeout' timer of 0.1 seconds
+2022-09-24 03:36:26,366 p=6329 u=ntc n=ansible | <csr2> updating play_context for connection
+2022-09-24 03:36:26,366 p=6329 u=ntc n=ansible | <csr2> 
+2022-09-24 03:36:26,366 p=6329 u=ntc n=ansible | <csr2> local domain socket path is /home/ntc/.ansible/pc/4583268dc7
+2022-09-24 03:36:26,367 p=6328 u=ntc n=ansible | <csr1> ESTABLISH LOCAL CONNECTION FOR USER: ntc
+2022-09-24 03:36:26,367 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3 `"&& mkdir "` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064 `" && echo ansible-tmp-1663990586.367484-6328-28372423071064="` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064 `" ) && sleep 0'
+2022-09-24 03:36:26,368 p=6329 u=ntc n=ansible | <csr2> ESTABLISH LOCAL CONNECTION FOR USER: ntc
+2022-09-24 03:36:26,368 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3 `"&& mkdir "` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164 `" && echo ansible-tmp-1663990586.3684993-6329-97122648491164="` echo /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164 `" ) && sleep 0'
+2022-09-24 03:36:26,477 p=6330 u=ntc n=ansible | Using module file /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible/modules/stat.py
+2022-09-24 03:36:26,477 p=6328 u=ntc n=ansible | Using module file /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible/modules/stat.py
+2022-09-24 03:36:26,477 p=6330 u=ntc n=ansible | <csr3> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmps15nfm2p TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/AnsiballZ_stat.py
+2022-09-24 03:36:26,477 p=6329 u=ntc n=ansible | Using module file /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible/modules/stat.py
+2022-09-24 03:36:26,478 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/AnsiballZ_stat.py && sleep 0'
+2022-09-24 03:36:26,478 p=6328 u=ntc n=ansible | <csr1> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmppejhinwp TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/AnsiballZ_stat.py
+2022-09-24 03:36:26,478 p=6329 u=ntc n=ansible | <csr2> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmp2_92s22n TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/AnsiballZ_stat.py
+2022-09-24 03:36:26,478 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/AnsiballZ_stat.py && sleep 0'
+2022-09-24 03:36:26,478 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/AnsiballZ_stat.py && sleep 0'
+2022-09-24 03:36:26,484 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c '/home/ntc/.virtualenvs/ntc/bin/python /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/AnsiballZ_stat.py && sleep 0'
+2022-09-24 03:36:26,484 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c '/home/ntc/.virtualenvs/ntc/bin/python /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/AnsiballZ_stat.py && sleep 0'
+2022-09-24 03:36:26,484 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c '/home/ntc/.virtualenvs/ntc/bin/python /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/AnsiballZ_stat.py && sleep 0'
+2022-09-24 03:36:26,601 p=6328 u=ntc n=ansible | <csr1> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmp_bi4fiwn/log.j2 TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/source
+2022-09-24 03:36:26,602 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/source && sleep 0'
+2022-09-24 03:36:26,605 p=6330 u=ntc n=ansible | <csr3> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmp4m267q_g/log.j2 TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/source
+2022-09-24 03:36:26,605 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/source && sleep 0'
+2022-09-24 03:36:26,607 p=6329 u=ntc n=ansible | <csr2> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmpojrknceq/log.j2 TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/source
+2022-09-24 03:36:26,608 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/source && sleep 0'
+2022-09-24 03:36:26,713 p=6328 u=ntc n=ansible | Using module file /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible/modules/copy.py
+2022-09-24 03:36:26,713 p=6329 u=ntc n=ansible | Using module file /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible/modules/copy.py
+2022-09-24 03:36:26,713 p=6330 u=ntc n=ansible | Using module file /home/ntc/.virtualenvs/ntc/lib/python3.8/site-packages/ansible/modules/copy.py
+2022-09-24 03:36:26,713 p=6328 u=ntc n=ansible | <csr1> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmplu2c54vo TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/AnsiballZ_copy.py
+2022-09-24 03:36:26,714 p=6329 u=ntc n=ansible | <csr2> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmppz2vs3xo TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/AnsiballZ_copy.py
+2022-09-24 03:36:26,714 p=6330 u=ntc n=ansible | <csr3> PUT /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/tmpt4hobao1 TO /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/AnsiballZ_copy.py
+2022-09-24 03:36:26,714 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/AnsiballZ_copy.py && sleep 0'
+2022-09-24 03:36:26,714 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/AnsiballZ_copy.py && sleep 0'
+2022-09-24 03:36:26,714 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c 'chmod u+x /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/ /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/AnsiballZ_copy.py && sleep 0'
+2022-09-24 03:36:26,720 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c '/home/ntc/.virtualenvs/ntc/bin/python /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/AnsiballZ_copy.py && sleep 0'
+2022-09-24 03:36:26,721 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c '/home/ntc/.virtualenvs/ntc/bin/python /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/AnsiballZ_copy.py && sleep 0'
+2022-09-24 03:36:26,721 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c '/home/ntc/.virtualenvs/ntc/bin/python /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/AnsiballZ_copy.py && sleep 0'
+2022-09-24 03:36:26,843 p=6330 u=ntc n=ansible | <csr3> EXEC /bin/sh -c 'rm -f -r /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/ > /dev/null 2>&1 && sleep 0'
+2022-09-24 03:36:26,844 p=6329 u=ntc n=ansible | <csr2> EXEC /bin/sh -c 'rm -f -r /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/ > /dev/null 2>&1 && sleep 0'
+2022-09-24 03:36:26,850 p=6192 u=ntc n=ansible | TASK [Generate Run Report] *****************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:26,851 p=6328 u=ntc n=ansible | <csr1> EXEC /bin/sh -c 'rm -f -r /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/ > /dev/null 2>&1 && sleep 0'
+2022-09-24 03:36:26,852 p=6192 u=ntc n=ansible | changed: [csr3] => changed=true 
+  checksum: c1ea493f88e569cebeb52fa06b9712630a201116
+  dest: logs/csr3-09-24-2022_03-36.txt
+  diff: []
+  gid: 0
+  group: root
+  invocation:
+    module_args:
+      _original_basename: log.j2
+      attributes: null
+      backup: false
+      checksum: c1ea493f88e569cebeb52fa06b9712630a201116
+      content: null
+      dest: logs/csr3-09-24-2022_03-36.txt
+      directory_mode: null
+      follow: false
+      force: true
+      group: null
+      local_follow: null
+      mode: null
+      owner: null
+      remote_src: null
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/source
+      unsafe_writes: false
+      validate: null
+  md5sum: 560fd71f6497895b6cbcde3d63888831
+  mode: '0644'
+  owner: ntc
+  size: 1030
+  src: /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.36266-6330-141067998826659/source
+  state: file
+  uid: 1000
+2022-09-24 03:36:26,853 p=6192 u=ntc n=ansible | changed: [csr2] => changed=true 
+  checksum: 8823d0f95029daaf474efc7a31972d0f68def6b8
+  dest: logs/csr2-09-24-2022_03-36.txt
+  diff: []
+  gid: 0
+  group: root
+  invocation:
+    module_args:
+      _original_basename: log.j2
+      attributes: null
+      backup: false
+      checksum: 8823d0f95029daaf474efc7a31972d0f68def6b8
+      content: null
+      dest: logs/csr2-09-24-2022_03-36.txt
+      directory_mode: null
+      follow: false
+      force: true
+      group: null
+      local_follow: null
+      mode: null
+      owner: null
+      remote_src: null
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/source
+      unsafe_writes: false
+      validate: null
+  md5sum: 76b18cf70869b356f3ab013d1947911a
+  mode: '0644'
+  owner: ntc
+  size: 1028
+  src: /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.3684993-6329-97122648491164/source
+  state: file
+  uid: 1000
+2022-09-24 03:36:26,861 p=6192 u=ntc n=ansible | changed: [csr1] => changed=true 
+  checksum: 49fca029f2f240b9ffceb6abd3c278964dfe6545
+  dest: logs/csr1-09-24-2022_03-36.txt
+  diff: []
+  gid: 0
+  group: root
+  invocation:
+    module_args:
+      _original_basename: log.j2
+      attributes: null
+      backup: false
+      checksum: 49fca029f2f240b9ffceb6abd3c278964dfe6545
+      content: null
+      dest: logs/csr1-09-24-2022_03-36.txt
+      directory_mode: null
+      follow: false
+      force: true
+      group: null
+      local_follow: null
+      mode: null
+      owner: null
+      remote_src: null
+      selevel: null
+      serole: null
+      setype: null
+      seuser: null
+      src: /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/source
+      unsafe_writes: false
+      validate: null
+  md5sum: 5dbc21f40aff073a74baa182bad1839f
+  mode: '0644'
+  owner: ntc
+  size: 1030
+  src: /home/ntc/.ansible/tmp/ansible-local-6192kyqi4tp3/ansible-tmp-1663990586.367484-6328-28372423071064/source
+  state: file
+  uid: 1000
+2022-09-24 03:36:26,868 p=6192 u=ntc n=ansible | META: ran handlers
+2022-09-24 03:36:26,874 p=6192 u=ntc n=ansible | META: ran handlers
+2022-09-24 03:36:26,877 p=6192 u=ntc n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+2022-09-24 03:36:26,877 p=6192 u=ntc n=ansible | csr1                       : ok=9    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-24 03:36:26,877 p=6192 u=ntc n=ansible | csr2                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-24 03:36:26,877 p=6192 u=ntc n=ansible | csr3                       : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-24 03:36:26,975 p=6277 u=ntc n=ansible | shutdown complete
+2022-09-24 03:36:26,976 p=6280 u=ntc n=ansible | shutdown complete
+2022-09-24 03:36:26,977 p=6283 u=ntc n=ansible | shutdown complete
+2022-09-24 03:36:33,268 p=6214 u=ntc n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-09-24 03:36:33,292 p=6211 u=ntc n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-09-24 03:36:33,294 p=6217 u=ntc n=ansible | persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2022-09-24 03:36:33,369 p=6214 u=ntc n=ansible | shutdown complete
+2022-09-24 03:36:33,393 p=6211 u=ntc n=ansible | shutdown complete
+2022-09-24 03:36:33,395 p=6217 u=ntc n=ansible | shutdown complete

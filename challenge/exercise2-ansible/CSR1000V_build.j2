@@ -1,0 +1,25 @@
+!
+{% for interface in interfaces %}
+interface {{ interface.name }}
+  description {{ interface.description }}
+  ip address {{ interface.ip_address }}
+{% if interface.state == "up" %}
+  no shutdown
+{% endif %}
+!
+{% endfor %}
+!
+{% for bgp_main in bgp %}
+router bgp {{ bgp_main.asn }}
+  bgp router-id {{ bgp_main.rid }}
+  {% endfor %}
+!
+{% for peerings in bgp_neighbors %}
+neighbor {{ peerings.name }} peer-group
+neighbor {{ peerings.name }} remote-as {{ peerings.remote_asn }}
+neighbor {{ peerings.peer_ip }} peer-group {{ peerings.name }}
+{% if peerings.state != "up" %}
+neighbor {{ peerings.peer_ip }} shutdown
+{% endif %}
+!
+{% endfor %}

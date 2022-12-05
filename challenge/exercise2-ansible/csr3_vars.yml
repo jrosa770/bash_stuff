@@ -1,0 +1,23 @@
+---
+interfaces:
+  - name: GigabitEthernet2
+    ip_address: "10.10.13.2 255.255.255.252"
+    description: "R:CSR1:Gi2:65512:10.10.13.0/30"
+    state: up
+  - name: GigabitEthernet3
+    ip_address: "10.10.23.3 255.255.255.248"
+    description: "R:CSR3:Gi3:65513:10.10.23.0/28"
+    state: up
+bgp:
+  - asn: 65513 
+    rid: 3.3.3.3
+bgp_neighbors:
+  - name: csr1
+    peer_ip: 10.10.13.1
+    remote_asn: 65511
+    state: up
+  - name: csr2
+    peer_ip: 10.10.23.2
+    remote_asn: 65512
+    state: up
+...

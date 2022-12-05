@@ -1,0 +1,269 @@
+Connecting to csr1 ...
+Getting device facts
+!
+interface GigabitEthernet2
+  description R:CSR3:Gi2:65512:10.10.13.2/30
+  ip address 10.10.13.1 255.255.255.252
+  no shutdown
+!
+interface GigabitEthernet4
+  description R:CSR2:Gi4:65513:10.10.12.0/30
+  ip address 10.10.12.1 255.255.255.252
+  no shutdown
+!
+!
+router bgp 65511
+  bgp router-id 1.1.1.1
+!
+neighbor csr2 peer-group
+neighbor csr2 remote-as 65512
+neighbor 10.10.12.2 peer-group csr2
+!
+neighbor csr3 peer-group
+neighbor csr3 remote-as 65513
+neighbor 10.10.13.2 peer-group csr3
+!
+
+Pre Commit Check
+
+Diff:
++interface GigabitEthernet2
++  description R:CSR3:Gi2:65512:10.10.13.2/30
++  ip address 10.10.13.1 255.255.255.252
+-  no shutdown
++interface GigabitEthernet4
++  description R:CSR2:Gi4:65513:10.10.12.0/30
++  ip address 10.10.12.1 255.255.255.252
+-  no shutdown
++router bgp 65511
++  bgp router-id 1.1.1.1
++neighbor csr2 peer-group
++neighbor csr2 remote-as 65512
++neighbor 10.10.12.2 peer-group csr2
++neighbor csr3 peer-group
++neighbor csr3 remote-as 65513
++neighbor 10.10.13.2 peer-group csr3
+Done.
+Connecting to csr2 ...
+Getting device facts
+!
+interface GigabitEthernet3
+  description CSR3:Gi3:65513:10.10.23.0/28
+  ip address 10.10.23.2 255.255.255.248
+  no shutdown
+!
+interface GigabitEthernet4
+  description R:CSR2:Gi4:65513:10.10.12.0/30
+  ip address 10.10.12.2 255.255.255.252
+  no shutdown
+!
+!
+router bgp 65512
+  bgp router-id 2.2.2.2
+!
+neighbor csr1 peer-group
+neighbor csr1 remote-as 65511
+neighbor 10.10.12.1 peer-group csr1
+!
+neighbor csr3 peer-group
+neighbor csr3 remote-as 65513
+neighbor 10.10.23.3 peer-group csr3
+!
+
+Pre Commit Check
+
+Diff:
++interface GigabitEthernet3
++  description CSR3:Gi3:65513:10.10.23.0/28
++  ip address 10.10.23.2 255.255.255.248
+-  no shutdown
++interface GigabitEthernet4
++  description R:CSR2:Gi4:65513:10.10.12.0/30
++  ip address 10.10.12.2 255.255.255.252
+-  no shutdown
++router bgp 65512
++  bgp router-id 2.2.2.2
++neighbor csr1 peer-group
++neighbor csr1 remote-as 65511
++neighbor 10.10.12.1 peer-group csr1
++neighbor csr3 peer-group
++neighbor csr3 remote-as 65513
++neighbor 10.10.23.3 peer-group csr3
+Done.
+Connecting to csr3 ...
+Getting device facts
+!
+interface GigabitEthernet2
+  description R:CSR1:Gi2:65512:10.10.13.0/30
+  ip address 10.10.13.2 255.255.255.252
+  no shutdown
+!
+interface GigabitEthernet3
+  description R:CSR3:Gi3:65513:10.10.23.0/28
+  ip address 10.10.23.3 255.255.255.248
+  no shutdown
+!
+!
+router bgp 65513
+  bgp router-id 3.3.3.3
+!
+neighbor csr1 peer-group
+neighbor csr1 remote-as 65511
+neighbor 10.10.13.1 peer-group csr1
+!
+neighbor csr2 peer-group
+neighbor csr2 remote-as 65512
+neighbor 10.10.23.2 peer-group csr2
+!
+
+Pre Commit Check
+
+Diff:
++interface GigabitEthernet2
++  description R:CSR1:Gi2:65512:10.10.13.0/30
++  ip address 10.10.13.2 255.255.255.252
+-  no shutdown
++interface GigabitEthernet3
++  description R:CSR3:Gi3:65513:10.10.23.0/28
++  ip address 10.10.23.3 255.255.255.248
+-  no shutdown
++router bgp 65513
++  bgp router-id 3.3.3.3
++neighbor csr1 peer-group
++neighbor csr1 remote-as 65511
++neighbor 10.10.13.1 peer-group csr1
++neighbor csr2 peer-group
++neighbor csr2 remote-as 65512
++neighbor 10.10.23.2 peer-group csr2
+Done.
+Connecting to csr1 ...
+Getting Peering Information
+{
+    "global": {
+        "router_id": "1.1.1.1",
+        "peers": {
+            "10.10.12.2": {
+                "local_as": 65511,
+                "remote_as": 65512,
+                "remote_id": "2.2.2.2",
+                "is_up": true,
+                "is_enabled": true,
+                "description": "",
+                "uptime": 31,
+                "address_family": {
+                    "ipv4 unicast": {
+                        "received_prefixes": 0,
+                        "accepted_prefixes": 0,
+                        "sent_prefixes": 0
+                    }
+                }
+            },
+            "10.10.13.2": {
+                "local_as": 65511,
+                "remote_as": 65513,
+                "remote_id": "3.3.3.3",
+                "is_up": true,
+                "is_enabled": true,
+                "description": "",
+                "uptime": 32,
+                "address_family": {
+                    "ipv4 unicast": {
+                        "received_prefixes": 0,
+                        "accepted_prefixes": 0,
+                        "sent_prefixes": 0
+                    }
+                }
+            }
+        }
+    }
+}
+Done.
+Connecting to csr2 ...
+Getting Peering Information
+{
+    "global": {
+        "router_id": "2.2.2.2",
+        "peers": {
+            "10.10.12.1": {
+                "local_as": 65512,
+                "remote_as": 65511,
+                "remote_id": "1.1.1.1",
+                "is_up": true,
+                "is_enabled": true,
+                "description": "",
+                "uptime": 32,
+                "address_family": {
+                    "ipv4 unicast": {
+                        "received_prefixes": 0,
+                        "accepted_prefixes": 0,
+                        "sent_prefixes": 0
+                    }
+                }
+            },
+            "10.10.23.3": {
+                "local_as": 65512,
+                "remote_as": 65513,
+                "remote_id": "3.3.3.3",
+                "is_up": true,
+                "is_enabled": true,
+                "description": "",
+                "uptime": 28,
+                "address_family": {
+                    "ipv4 unicast": {
+                        "received_prefixes": 0,
+                        "accepted_prefixes": 0,
+                        "sent_prefixes": 0
+                    }
+                }
+            }
+        }
+    }
+}
+Done.
+Connecting to csr3 ...
+Getting Peering Information
+{
+    "global": {
+        "router_id": "3.3.3.3",
+        "peers": {
+            "10.10.13.1": {
+                "local_as": 65513,
+                "remote_as": 65511,
+                "remote_id": "1.1.1.1",
+                "is_up": true,
+                "is_enabled": true,
+                "description": "",
+                "uptime": 34,
+                "address_family": {
+                    "ipv4 unicast": {
+                        "received_prefixes": 0,
+                        "accepted_prefixes": 0,
+                        "sent_prefixes": 0
+                    }
+                }
+            },
+            "10.10.23.2": {
+                "local_as": 65513,
+                "remote_as": 65512,
+                "remote_id": "2.2.2.2",
+                "is_up": true,
+                "is_enabled": true,
+                "description": "",
+                "uptime": 29,
+                "address_family": {
+                    "ipv4 unicast": {
+                        "received_prefixes": 0,
+                        "accepted_prefixes": 0,
+                        "sent_prefixes": 0
+                    }
+                }
+            }
+        }
+    }
+}
+Done.
+hostname    vendor    model
+----------  --------  --------
+csr1        Cisco     CSR1000V
+csr2        Cisco     CSR1000V
+csr3        Cisco     CSR1000V
